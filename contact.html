@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link
+    rel="stylesheet"
+    href="css/skins/color-1.css"
+    class="alternate-style"
+    title="color-1"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-2.css"
+    class="alternate-style"
+    title="color-2"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-3.css"
+    class="alternate-style"
+    title="color-3"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-4.css"
+    class="alternate-style"
+    title="color-4"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-5.css"
+    class="alternate-style"
+    title="color-5"
+  />
+
+  <link rel="stylesheet" href="css/style-switcher.css" />
+
+    
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="#"><span>D</span>hvani.</a></div>
+        <ul class="navlist">
+            <li><a href="/" style="--i:1">Home</a></li>
+            <li><a href="/about.html" style="--i:2">About</a></li>
+            <li><a href="/services.html" style="--i:3">Services</a></li>
+            <li><a href="/skills.html" style="--i:4">Skills</a></li>
+            <li><a href="/portfolio.html" style="--i:5">Projects</a></li>
+            <li><a href="/blog.html" style="--i:6">Blog</a></li>
+            <li><a href="/contact.html" style="--i:7">Contact Me</a></li>
+        </ul>
+        <div id="menu-icon" class="menu-icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+  
+    <section class="contact section">
+        <div class="container">
+            <div class="row">
+                <div class="section-title padd-15">
+                  <h2>Contact Me</h2>
+                </div>
+              </div>
+              <h3 class="contact-title padd-15">Have You Any Questions?</h3>
+              <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+              <div class="row">
+
+                <!-- start -->
+                 <div class="contact-info-item padd-15">
+                    <div class="icon"><i class='bx bxs-phone'></i></div>
+                    <h4>Call Us On</h4>
+                    <p>+91 9773001459</p>
+                 </div>
+                <!-- end -->
+
+                  <!-- start -->
+                  <div class="contact-info-item padd-15">
+                    <div class="icon"><i class='bx bx-location-plus' ></i></div>
+                    <h4>Wrok From</h4>
+                    <p>India</p>
+                 </div>
+                <!-- end -->
+
+                 <!-- start -->
+                <div class="contact-info-item padd-15">
+                    <div class="icon"><i class='bx bxl-twitter' ></i></div>
+                    <h4>Twitter</h4>
+                    <p>Not avilable</p>
+                    <!-- <a href="#"></a> -->
+                 </div>
+                  <!-- end -->
+
+                   <!-- start -->
+                <div class="contact-info-item padd-15">
+                    <div class="icon"><i class='bx bx-globe' ></i></div>
+                    <h4>Website</h4>
+                    <p>Not avilable</p>
+                 </div>
+                  <!-- end -->
+              </div>
+
+              <h3 class="contact-title padd-15">SEND ME YOUR MESSAGES AND QUERIES</h3>
+              <h4 class="contact-sub-title padd-15">I'M VERY REPOSNSIVE TO MESSAGES</h4>
+
+              <form action="/post" method="POST">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="text" name="address" placeholder="Address" />
+                <input type="text" name="phone" placeholder="Phone" />
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <div class="btn-box formBtn">
+                  <button type="submit" class="btn">Send Message</button>
+              </div>
+            </form>
+        </div>
+    </section>
+
+     <!-- footer -->
+     <footer>
+        <p>Copyright &copy; 2023 by DK || All Right Reserved.</p>
+        <a href="/"><i class='bx bx-up-arrow-alt'></i></a>
+     </footer> 
+
+      <!-- style switcher start -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="bx bx-cog"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="bx"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+
+    <!-- style switcher end-->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  
+    <script>
+      //theme
+      const alternateStyles = document.querySelectorAll(".alternate-style");
+
+      function setActiveStyle(color) {
+        alternateStyles.forEach((style) => {
+          if (color === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+          } else {
+            style.setAttribute("disabled", "true");
+          }
+        });
+      }
+    </script>
+
+     <!-- Day and night -->
+     <script>
+      const dayNight = document.querySelector(".day-night");
+      dayNight.addEventListener("click", () => {
+        dayNight.querySelector("i").classList.toggle("bxs-sun");
+        dayNight.querySelector("i").classList.toggle("bxs-moon");
+        document.body.classList.toggle("dark");
+      });
+      window.addEventListener("load", () => {
+        if (document.body.classList.contains("dark")) {
+          dayNight.querySelector("i").classList.add("bxs-sun");
+        } else {
+          dayNight.querySelector("i").classList.add("bxs-moon");
+        }
+      });
+    </script>
+  
+  
+  
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link
+    rel="stylesheet"
+    href="css/skins/color-1.css"
+    class="alternate-style"
+    title="color-1"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-2.css"
+    class="alternate-style"
+    title="color-2"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-3.css"
+    class="alternate-style"
+    title="color-3"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-4.css"
+    class="alternate-style"
+    title="color-4"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-5.css"
+    class="alternate-style"
+    title="color-5"
+  />
+
+  <link rel="stylesheet" href="css/style-switcher.css" />
+
+</head>
+<body>
+    
+    
+    <header>
+        <div class="logo"><a href="#"><span>D</span>hvani.</a></div>
+        <ul class="navlist">
+            <li><a href="/" style="--i:1">Home</a></li>
+            <li><a href="/about.html" style="--i:2">About</a></li>
+            <li><a href="/services.html" style="--i:3">Services</a></li>
+            <li><a href="/skills.html" style="--i:4">Skills</a></li>
+            <li><a href="/portfolio.html" style="--i:5">Projects</a></li>
+            <li><a href="/blog.html" style="--i:6">Blog</a></li>
+            <li><a href="/contact.html" style="--i:7">Contact Me</a></li>
+        </ul>
+        <div id="menu-icon" class="menu-icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+  
+
+      <section id="blog" class="blog section">
+        <div class="main">
+            <div class="blogcontainer">
+                <div class="row">
+                    <div class="section-title padd-15">
+                      <h2>Blogs</h2>
+                    <!-- <h1>Blogs by Dhvani</h1> -->
+                    </div>
+                  </div>
+                <div class="blogItem">
+                    <h2>Learn Javascript - in fun way!</h2>
+                    <p>JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.</p>
+                    <div class="btn-box formBtn">
+                      <a href="Books/js.pdf" type="submit" class="btn" target="_blanck">Read more</a>
+                      <a href="Books/js_1.pdf" type="submit" class="btn" target="_blanck">Read book</a>
+                  </div>
+                </div>
+
+                <div class="blogItem">
+                    <h2>Java - in fun way!</h2>
+                    <p>Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself. It is a fast, secure, reliable programming language for coding everything from mobile apps and enterprise software to big data applications and server-side technologies.</p>
+                    <div class="btn-box formBtn">
+                      <a href="Books/java.pdf" type="submit" class="btn" target="_blanck">Read more</a>
+                      <a href="Books/java_1.pdf" type="submit" class="btn" target="_blanck">Read book</a>
+                  </div>
+                </div>
+
+                <div class="blogItem">
+                    <h2>Dsa - in fun way!</h2>
+                    <p>Data Structures and Algorithms (DSA) is a fundamental part of Computer Science that teaches you how to think and solve complex problems systematically. Using the right data structure and algorithm makes your program run faster, especially when working with lots of data.</p>
+                    <div class="btn-box formBtn">
+                      <a href="Books/dsa.pdf" type="submit" class="btn" target="_blanck">Read more</a>
+                      <a href="Books/algo.pdf" type="submit" class="btn" target="_blanck">Read book</a>
+                  </div>
+                </div>
+
+                <div class="blogItem">
+                    <h2>Android development - in fun way!</h2>
+                    <p>Android is a software package and linux based operating system for mobile devices such as tablet computers and smartphones.</p>
+                    <div class="btn-box formBtn">
+                      <a href="Books/a.pdf" type="submit" class="btn" target="_blanck">Read more</a>
+                      <a href="Books/a.pdf" type="submit" class="btn" target="_blanck">Read book</a>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+      <!-- footer -->
+     <footer>
+        <p>Copyright &copy; 2023 by DK || All Right Reserved.</p>
+        <a href="/"><i class='bx bx-up-arrow-alt'></i></a>
+     </footer>
+    
+     <!-- style switcher start -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="bx bx-cog"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="bx"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+
+    <!-- style switcher end-->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  
+    <script>
+      //theme
+      const alternateStyles = document.querySelectorAll(".alternate-style");
+
+      function setActiveStyle(color) {
+        alternateStyles.forEach((style) => {
+          if (color === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+          } else {
+            style.setAttribute("disabled", "true");
+          }
+        });
+      }
+    </script>
+
+     <!-- Day and night -->
+     <script>
+      const dayNight = document.querySelector(".day-night");
+      dayNight.addEventListener("click", () => {
+        dayNight.querySelector("i").classList.toggle("bxs-sun");
+        dayNight.querySelector("i").classList.toggle("bxs-moon");
+        document.body.classList.toggle("dark");
+      });
+      window.addEventListener("load", () => {
+        if (document.body.classList.contains("dark")) {
+          dayNight.querySelector("i").classList.add("bxs-sun");
+        } else {
+          dayNight.querySelector("i").classList.add("bxs-moon");
+        }
+      });
+    </script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

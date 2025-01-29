@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="css/skins/color-1.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-4.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-5.css"
+      class="alternate-style"
+      title="color-5"
+    />
+
+    <link rel="stylesheet" href="css/style-switcher.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"><span>D</span>hvani.</a>
+      </div>
+      <ul class="navlist">
+        <li><a href="/" style="--i: 1">Home</a></li>
+        <li><a href="/about.html" style="--i: 2">About</a></li>
+        <li><a href="/services.html" style="--i: 3">Services</a></li>
+        <li><a href="/skills.html" style="--i: 4">Skills</a></li>
+        <li><a href="/portfolio.html" style="--i: 5">Projects</a></li>
+        <li><a href="/blog.html" style="--i: 6">Blog</a></li>
+        <li><a href="/contact.html" style="--i: 7">Contact Me</a></li>
+      </ul>
+      <div id="menu-icon" class="menu-icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </header>
+
+    <section id="home" class="home">
+      <div class="home-content">
+        <div class="devinfo">
+          <!-- <div class="hello">Hello I'm <span>Dhvani Kakadiya</span></div> -->
+          <h3 class="hello">Hello I'm <span>Dhvani Kakadiya</span></h3>
+          <h3 class="my-profession">
+            I'm a <span class="typing">Web developer</span>
+          </h3>
+          <div class="moreabout">
+            I am a computer engineer, and I like coding. I am also interseted in maths , physics(astronomy).
+          </div>
+          <div class="btn-box">
+            <a href="/Books/A resume.pdf" class="btn" target="_blanck">Download Resume</a>
+            <a href="/contact.html" class="btn">Hire Me!</a>
+          </div>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://github.com/dhvani1215" target="_blanck"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/dhvani-kakadiya-2811a8252" target="_blanck"><i class='bx bxl-linkedin-square'></i></i></a>
+          <a href="Notavilable.html"  target="_blanck"><i class="bx bxl-instagram-alt"></i></a>
+          <a href="/Notavilable.html" target="_blanck"><i class="bx bxl-facebook-circle"></i></a>
+        </div>
+      </div>
+      <div class="home-image">
+        <div class="img-box">
+          <img src="img/p1.png" alt="Dhvani K" />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <p>Copyright &copy; 2023 by DK || All Right Reserved.</p>
+      <a href="/"><i class="bx bx-up-arrow-alt"></i></a>
+    </footer>
+
+    <!-- style switcher start -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="bx bx-cog"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="bx"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+
+    <!-- Theam -->
+    <script>
+      const alternateStyles = document.querySelectorAll(".alternate-style");
+
+      function setActiveStyle(color) {
+        alternateStyles.forEach((style) => {
+          if (color === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+          } else {
+            style.setAttribute("disabled", "true");
+          }
+        });
+      }
+    </script>
+
+    <!-- Day and night -->
+    <script>
+      const dayNight = document.querySelector(".day-night");
+      dayNight.addEventListener("click", () => {
+        dayNight.querySelector("i").classList.toggle("bxs-sun");
+        dayNight.querySelector("i").classList.toggle("bxs-moon");
+        document.body.classList.toggle("dark");
+      });
+      window.addEventListener("load", () => {
+        if (document.body.classList.contains("dark")) {
+          dayNight.querySelector("i").classList.add("bxs-sun");
+        } else {
+          dayNight.querySelector("i").classList.add("bxs-moon");
+        }
+      });
+    </script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="script.js"></script>
+
+    <script src="//code.tidio.co/lfyy8susbcqwijvgmclg8dux2tsvlxhy.js" async></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background: white;
+        }
+        .chatboat{
+            position: fixed;
+            right: 40px;
+            bottom: 100px;
+            width: 420px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 128px 0 rgba(0, 0,0,0.1); 
+        }
+        .chatboat header{
+            background: #724ae8;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="chatbot">
+        <header>
+            <h2>chatbot</h2>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi there <br>How can I help you?</p>
+            </li>
+            <li class="chat outgoing">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message.."></textarea>
+            <span id="send-btn" class="material-symbols-outlined"></span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link
+    rel="stylesheet"
+    href="css/skins/color-1.css"
+    class="alternate-style"
+    title="color-1"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-2.css"
+    class="alternate-style"
+    title="color-2"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-3.css"
+    class="alternate-style"
+    title="color-3"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-4.css"
+    class="alternate-style"
+    title="color-4"
+    disabled
+  />
+  <link
+    rel="stylesheet"
+    href="css/skins/color-5.css"
+    class="alternate-style"
+    title="color-5"
+  />
+
+  <link rel="stylesheet" href="css/style-switcher.css" />
+
+</head>
+<body>
+   
+    <header>
+        <div class="logo"><a href="#"><span>D</span>hvani.</a></div>
+        <ul class="navlist">
+            <li><a href="/" style="--i:1">Home</a></li>
+            <li><a href="/about.html" style="--i:2">About</a></li>
+            <li><a href="/services.html" style="--i:3">Services</a></li>
+            <li><a href="/skills.html" style="--i:4">Skills</a></li>
+            <li><a href="/portfolio.html" style="--i:5">Projects</a></li>
+            <li><a href="/blog.html" style="--i:6">Blog</a></li>
+            <li><a href="/contact.html" style="--i:7">Contact Me</a></li>
+        </ul>
+        <div id="menu-icon" class="menu-icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+  
+      <section id="skills" class="skills">
+        <div class="main-text">
+            <span>Technical and professional</span>
+            <div class="skill-main">
+                <div class="skill-left">
+                    <h3>Technical skills</h3>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>HTML</p>
+                            <p>72%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="html"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Flutter</p>
+                            <p>40%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="flutter"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Javascript</p>
+                            <p>20%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="javascript"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Css</p>
+                            <p>62%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="css"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="skill-right">
+                    <h3>Professional skills</h3>
+                    <div class="professional">
+                        <div class="box">
+                            <div class="circle" data-dots="50" data-percent="70"></div>
+                            <div class="text">
+                                <big>70%</big>
+                                <small>Team Work</small>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="circle" data-dots="10" data-percent="80"></div>
+                            <div class="text">
+                                <big>80%</big>
+                                <small>Creativity</small>  
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="circle" data-dots="80" data-percent="90"></div>
+                            <div class="text">
+                                <big>90%</big>
+                                <small>Project Managment</small>     
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="circle" data-dots="80" data-percent="80"></div>
+                            <div class="text">
+                                <big>80%</big>
+                                <small>Comunication</small>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- footer -->
+     <footer>
+        <p>Copyright &copy; 2023 by DK || All Right Reserved.</p>
+        <a href="/"><i class='bx bx-up-arrow-alt'></i></a>
+     </footer>
+
+      <!-- style switcher start -->
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+          <i class="bx bx-cog"></i>
+        </div>
+        <div class="day-night s-icon">
+          <i class="bx"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+          <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+          <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+          <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+          <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+          <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+      </div>
+  
+      <!-- style switcher end-->
+  
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+      <script>
+        //theme
+        const alternateStyles = document.querySelectorAll(".alternate-style");
+  
+        function setActiveStyle(color) {
+          alternateStyles.forEach((style) => {
+            if (color === style.getAttribute("title")) {
+              style.removeAttribute("disabled");
+            } else {
+              style.setAttribute("disabled", "true");
+            }
+          });
+        }
+      </script>
+
+    <!-- Day and night -->
+    <script>
+      const dayNight = document.querySelector(".day-night");
+      dayNight.addEventListener("click", () => {
+        dayNight.querySelector("i").classList.toggle("bxs-sun");
+        dayNight.querySelector("i").classList.toggle("bxs-moon");
+        document.body.classList.toggle("dark");
+      });
+      window.addEventListener("load", () => {
+        if (document.body.classList.contains("dark")) {
+          dayNight.querySelector("i").classList.add("bxs-sun");
+        } else {
+          dayNight.querySelector("i").classList.add("bxs-moon");
+        }
+      });
+    </script>
+
+      <script src="script.js"></script>
+      
+</body>
+</html>
